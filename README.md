@@ -19,6 +19,10 @@ You can view a fully working live demo at https://ivandwijaya.github.io/jakmall-
 - ["A Complete Guide to Flexbox"](https://css-tricks.com/snippets/css/a-guide-to-flexbox/) - *Chris Coyier*
 - ["Stylus Language Documentation"](http://stylus-lang.com/) - *TJ Holowaychuk*
 - ["Responsive Web Design"](http://alistapart.com/article/responsive-web-design) - *Ethan Marcotte*
+- ["Web Site Optimization"](https://www.sitepoint.com/web-site-optimization-steps/) - *Stoyan Stefanov*
+
+## Optimization notes
+- `.css` and `.js` files are not minified for review purposes.
 
 ## Issues
 - Compatibility issue with flexbox not supported in IE 10 or lower.
