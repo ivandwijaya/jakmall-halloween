@@ -21,4 +21,4 @@ You can view a fully working live demo at https://ivandwijaya.github.io/jakmall-
 - ["Responsive Web Design"](http://alistapart.com/article/responsive-web-design) - *Ethan Marcotte*
 
 ## Issues
-- Compatibility issue with flexbox not supported for IE 10 or lower.
+- Compatibility issue with flexbox not supported in IE 10 or lower.
