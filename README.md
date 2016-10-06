@@ -4,7 +4,7 @@
 ![Screenshot](http://i.imgur.com/MIUassl.png)
 
 ## Demo
-You can view a fully working live demo at
+You can view a fully working live demo at https://ivandwijaya.github.io/jakmall-halloween/
 
 ## Resources
 - Adobe Photoshop CS6
@@ -19,3 +19,6 @@ You can view a fully working live demo at
 - ["A Complete Guide to Flexbox"](https://css-tricks.com/snippets/css/a-guide-to-flexbox/) - *Chris Coyier*
 - ["Stylus Language Documentation"](http://stylus-lang.com/) - *TJ Holowaychuk*
 - ["Responsive Web Design"](http://alistapart.com/article/responsive-web-design) - *Ethan Marcotte*
+
+## Issues
+- Compatibility issue with flexbox not supported for IE 10 or lower.
