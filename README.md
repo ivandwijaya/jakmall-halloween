@@ -3,6 +3,9 @@
 
 ![Screenshot](http://i.imgur.com/MIUassl.png)
 
+## Demo
+You can view a fully working live demo at
+
 ## Resources
 - Adobe Photoshop CS6
 - Prepros.io
