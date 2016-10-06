@@ -8,6 +8,7 @@ You can view a fully working live demo at https://ivandwijaya.github.io/jakmall-
 
 ## Resources
 - Adobe Photoshop CS6
+- Adobe Illustrator CS6
 - Prepros.io
 - Sublime Text 2
 - Angular.js Library
