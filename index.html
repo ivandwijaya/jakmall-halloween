@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html ng-app="Store">
+<head>
+    <title>Ivan Dwijaya - Designer & Developer</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="The portfolio of Ivan Dwijaya, an Indonesian Developer with a passion in Graphic Design & Web Development">
+    <meta name="keywords" content="ivan, dwijaya, portfolio, web design, graphic design, websites, graphics, illustration, freelance, developer">
+    
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script type="text/javascript" src="assets/js/angular.min.js"></script>
+    <script type="text/javascript" src="assets/js/app.js"></script>
+
+</head>
+<body ng-controller="StoreController as store">
+  <div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.8";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+  
+   <section id="banner">
+       <header id="homeBanner">
+           <div class="banner__wrapper">
+               <div class="banner__main">
+                   <div class="banner__logo">
+                       <img src="assets/img/banner__main.png" class="banner__image">
+                   </div>
+               </div>
+               <div class="banner__left"></div>
+               <div class="banner__right"></div>
+               <div class="banner__cat"></div>
+               <div class="banner__ghost"></div>
+           </div>
+       </header>
+   </section>
+   <section id="top">
+       <div class="top__wrapper">
+           <div class="top__columnlogo">
+               <div class="top__logo">
+                   <img src="assets/img/top__logo.png" class="top__image">
+               </div>
+           </div>
+           <div class="top__columntext">
+               <div class="top__textwrapper">
+                   <div class="top__share">
+                       <div class="fb-share-button" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse">Share</a></div>
+                   </div>
+                   <h1>Halloween Event</h1>
+                   <h2>Shop now and get a trick or treat.</h2>
+                   <p>Yuk, event ini berlaku mulai dari tanggal 21 - 31 Oktober 2016. Buruan ikutan, produknya lengkap, harga murah, dan dapat bonus trick or treat juga.</p>
+               </div>
+           </div>
+       </div>
+   </section>
+   <section id="main">
+      <div class="main__wrapper" ng-controller="TabController as tab">
+          <ul class="main__nav">
+           <li class="main__navmenu">
+               <a href ng-click="tab.setTab(1)" class="navmenu__elem" ng-class="{ active: tab.isSet(1) }">Elektronik</a>
+           </li>
+           <li class="main__navmenu">
+               <a href ng-click="tab.setTab(2)" class="navmenu__elem" ng-class="{ active: tab.isSet(2) }">Fashion</a>
+           </li>
+           <li class="main__navmenu">
+               <a href ng-click="tab.setTab(3)" class="navmenu__elem" ng-class="{ active: tab.isSet(3) }">Lainnya</a>
+           </li>
+          </ul>
+          <div class="main__content">
+              <div ng-show="tab.isSet(1)">
+                  <div class="content__wrapper">
+                      <ul class="content__flex">
+                          <li  ng-repeat="product in store.products" ng-if="product.category == 'elektronik'" class="content__item">
+                              <div class="item__wrapper">
+                                  <div class="item__best" ng-show="{{product.bestPrice}}">
+                                      <h4>Best Price</h4>
+                                  </div>
+                                  <div class="item__slider">
+                                      <div class="item__image"><img ng-src="{{product.images}}"></div>
+                                      <div class="item__description">
+                                          <h3 class="item__name">{{product.name}}</h3>
+                                          <h3 class="item__price">{{product.price | currency : "Rp " : 0}}</h3>
+                                          <button class="item__button--avail" ng-hide="{{product.soldOut}}">Buy Now</button>
+                                          <button class="item__button--soldout" ng-show="{{product.soldOut}}">Sold Out</button>
+                                      </div>
+                                  </div>
+                              </div>
+                          </li>
+                        </ul>
+                  </div>
+              </div>
+              <div ng-show="tab.isSet(2)">
+                  <div class="content__wrapper">
+                      <ul class="content__flex">
+                          <li  ng-repeat="product in store.products" ng-if="product.category == 'fashion'" class="content__item">
+                              <div class="item__wrapper">
+                                  <div class="item__best" ng-show="{{product.bestPrice}}">
+                                      <h4>Best Price</h4>
+                                  </div>
+                                  <div class="item__slider">
+                                      <div class="item__image"><img ng-src="{{product.images}}"></div>
+                                      <div class="item__description">
+                                          <h3 class="item__name">{{product.name}}</h3>
+                                          <h3 class="item__price">{{product.price | currency : "Rp " : 0}}</h3>
+                                          <button class="item__button--avail" ng-hide="{{product.soldOut}}">Buy Now</button>
+                                          <button class="item__button--soldout" ng-show="{{product.soldOut}}">Sold Out</button>
+                                      </div>
+                                  </div>
+                              </div>
+                          </li>
+                        </ul>
+                  </div>
+              </div>
+              <div ng-show="tab.isSet(3)">
+                  <div class="content__wrapper">
+                      <ul class="content__flex">
+                          <li  ng-repeat="product in store.products" ng-if="product.category == 'lainnya'" class="content__item">
+                              <div class="item__wrapper">
+                                  <div class="item__best" ng-show="{{product.bestPrice}}">
+                                      <h4>Best Price</h4>
+                                  </div>
+                                  <div class="item__slider">
+                                      <div class="item__image"><img ng-src="{{product.images}}"></div>
+                                      <div class="item__description">
+                                          <h3 class="item__name">{{product.name}}</h3>
+                                          <h3 class="item__price">{{product.price | currency : "Rp " : 0}}</h3>
+                                          <button class="item__button--avail" ng-hide="{{product.soldOut}}">Buy Now</button>
+                                          <button class="item__button--soldout" ng-show="{{product.soldOut}}">Sold Out</button>
+                                      </div>
+                                  </div>
+                              </div>
+                          </li>
+                        </ul>
+                  </div>
+              </div>
+          </div>
+      </div>
+   </section>
+    
+</body>
