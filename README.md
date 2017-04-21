@@ -1,10 +1,10 @@
 # README - Jakmall Halloween Page 
-> A halloween promotion page for e-commerce purposes
+> A simple attempt at Angular 1 halloween promotion page for e-commerce purposes
 
 ![Screenshot](http://i.imgur.com/MIUassl.png)
 
 ## Demo
-You can view a fully working live demo at https://ivandwijaya.github.io/jakmall-halloween/
+You can view a fully working live demo at https://ivandwijaya.github.io/simple-event/
 
 ## Resources
 - Adobe Photoshop CS6
